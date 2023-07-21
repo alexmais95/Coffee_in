@@ -5,6 +5,8 @@ class Coffee(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
     photo = models.ImageField()
+    time_create = models.DateTimeField(auto_now_add=True)
+    time_update = models.DateTimeField(auto_now=True)
     cat = models.ForeignKey('Category', on_delete=models.CASCADE)
 
     def __str__(self):
