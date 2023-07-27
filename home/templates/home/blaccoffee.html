@@ -1,0 +1,17 @@
+{% extends 'home/base.html'  %}
+
+{% block content %}
+
+
+
+                {% for p in item %}
+                    <div class="iner_element">
+                        <p><img src="{{ p.photo.url }}">
+                        <p>{{p.title}}</p>
+                        <p style="font-size:18px">{{p.description}}</p>
+                    </div>
+                {% endfor %}
+
+
+{% endblock %}
+
