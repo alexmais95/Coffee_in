@@ -25,10 +25,17 @@
                 <button class="btn btn-outline-secondary" type="button" id="button-addon2">Пошук</button>
             </div>
        </div>
-       <div class='loggin'>
-            <a class="log_nav" href="#">Log</a>
-       </div>
-
+       {% block login %}
+       {% if request.user.is_authenticated %}
+            <div class='loggin'>
+                <a class="log_nav" href="#">{{user}}</a>|<a class="log_nav" href="{% url 'logout' %}">Exit</a>
+            </div>
+       {% else %}
+             <div class='loggin'>
+                 <a class="log_nav" href="{% url 'register' %}">Register</a>|<a class="log_nav" href="{% url 'login' %}">Log</a>
+             </div>
+       {% endif %}
+        {% endblock %}
     </div>
 
 <!--    Область рецептів-->
@@ -50,7 +57,7 @@
         <div class='left'>
 
                 <div class="left_top">
-                    <h2 class='left_top_text'>Coffee</h2>
+                    <h2 class='left_top_text'>{{title}}</h2>
                 </div>
                 {% block content %}
                 <div class='left_center'>
