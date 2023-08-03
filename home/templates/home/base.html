@@ -45,12 +45,9 @@
         <div class='right'>
             <h2 class='menu'>Menu</h2>
                 <nav class="right_naw">
-                    <a class="nav_link" href="{% url 'blaccoffee' %}"> Чиста кава.</a>
-                    <a class="nav_link" href="{% url 'with_milk' %}"> Кава з молоком.</a>
-                    <a class="nav_link" href="#"> Кава з алкоголем.</a>
-                    <a class="nav_link" href="#"> Кава з шоколадом.</a>
-                    <a class="nav_link" href="#"> Методи заварювання кави.</a>
-                    <a class="nav_link" href="#"> Про вибір правильного зерна.</a>
+                    {% for m in menu %}
+                        <a class="nav_link" href="{% url m.url_name %}"> {{m.title}} </a>
+                    {% endfor %}
                 </nav>
         </div>
 
