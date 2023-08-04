@@ -4,7 +4,7 @@ from django.contrib.auth.views import LoginView
 
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, ListView
+from django.views.generic import CreateView, ListView, DetailView
 from .models import Coffee, Category
 from .utils import DataMixin
 from .forms import *
@@ -21,7 +21,7 @@ class BleacCoffee(DataMixin, ListView):
         return context | c_def
 
     def get_queryset(self):
-        return Coffee.objects.all()
+        return Coffee.objects.filter(cat_id=1)
 
 
 class WithMilk(DataMixin, ListView):
@@ -33,6 +33,22 @@ class WithMilk(DataMixin, ListView):
         context = super().get_context_data(**kwargs)
         c_def = self.get_user_context(title='Кава з молоком')
         return context | c_def
+
+    def get_queryset(self):
+        return Coffee.objects.filter(cat_id=2)
+
+
+class ShowPost(DataMixin, DetailView):
+    model = Coffee
+    template_name = 'home/post.html'
+    slug_url_kwarg = 'slug'
+    context_object_name = 'slug'
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        c_def = self.get_user_context(title='Описання')
+        return dict(list(context.items()) + list(c_def.items()))
+
 
 
 class RegisterUser(DataMixin, CreateView):

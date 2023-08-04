@@ -3,17 +3,18 @@
 
 
 {% block content %}
-<div class='left_center'>
+
                 {% for p in item %}
-                    {% if p.cat_id == 1 %}
+
                     <div class="iner_element">
-                        <p><img src="{{ p.photo.url }}">
-                        <p>{{p.title}}</p>
-                        <p style="font-size:18px">{{p.description}}</p>
+                        <p><img class="cup" src="{{ p.photo.url }}"></p>
+                        <a href="{{p.get_absolute_url}}">{{p.title}}</a>
+
                     </div>
-                    {% endif %}
+
                 {% endfor %}
-</div>
+
+
 
 {% endblock %}
 
