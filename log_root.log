@@ -1,0 +1,51 @@
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+hello_log
+"GET /home/bleaccoffee/ HTTP/1.1" 200 3524
+"GET /home/bleaccoffee/ HTTP/1.1" 200 3524
+"GET /static/home/css/home.css HTTP/1.1" 304 0
+"GET /static/home/css/home.css HTTP/1.1" 304 0
+"GET /media/photos/2023/08/04/esspreso_EcSpuZW.png HTTP/1.1" 304 0
+"GET /media/photos/2023/08/04/%D0%9B%D1%83%D0%BD%D0%B3%D0%BE.png HTTP/1.1" 304 0
+"GET /media/photos/2023/08/04/%D0%9B%D1%83%D0%BD%D0%B3%D0%BE.png HTTP/1.1" 304 0
+"GET /media/photos/2023/08/04/esspreso_EcSpuZW.png HTTP/1.1" 304 0
+"GET /media/photos/2023/08/04/Amerikano.png HTTP/1.1" 304 0
+"GET /media/photos/2023/08/04/Amerikano.png HTTP/1.1" 304 0
+"GET /home/bleaccoffee/ HTTP/1.1" 200 3524
+"GET /home/bleaccoffee/ HTTP/1.1" 200 3524
+"GET /home/post/lungo/ HTTP/1.1" 200 3488
+"GET /home/post/lungo/ HTTP/1.1" 200 3488
+F:\Site_Coffee\coffee_in\home\views.py changed, reloading.
+F:\Site_Coffee\coffee_in\home\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+hello_log
+hello_log
+"GET /home/bleaccoffee/ HTTP/1.1" 200 3524
+"GET /home/bleaccoffee/ HTTP/1.1" 200 3524
+"GET /home/post/lungo/ HTTP/1.1" 200 3488
+"GET /home/post/lungo/ HTTP/1.1" 200 3488
+"GET /home/with_milk/ HTTP/1.1" 200 3581
+"GET /home/with_milk/ HTTP/1.1" 200 3581
+"GET /media/photos/2023/08/04/cappuchino.png HTTP/1.1" 304 0
+"GET /media/photos/2023/08/04/cappuchino.png HTTP/1.1" 304 0
+"GET /media/photos/2023/08/04/latte.png HTTP/1.1" 304 0
+"GET /media/photos/2023/08/04/latte.png HTTP/1.1" 304 0
+"GET /media/photos/2023/08/04/Fletwhite.png HTTP/1.1" 304 0
+"GET /media/photos/2023/08/04/Fletwhite.png HTTP/1.1" 304 0
+"GET /home/bleaccoffee/ HTTP/1.1" 200 3524
+"GET /home/bleaccoffee/ HTTP/1.1" 200 3524
+F:\Site_Coffee\coffee_in\coffee_in\settings.py changed, reloading.
+F:\Site_Coffee\coffee_in\coffee_in\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+hello_log
+hello_log
+F:\Site_Coffee\coffee_in\coffee_in\settings.py changed, reloading.
+F:\Site_Coffee\coffee_in\coffee_in\settings.py changed, reloading.
+2023-08-05 16:01:22,576 INFO Watching for file changes with StatReloader autoreload.py
+2023-08-05 16:01:22,576 INFO Watching for file changes with StatReloader autoreload.py
+2023-08-05 16:01:22,585 INFO hello_log views.py
+2023-08-05 16:01:22,585 INFO hello_log views.py
+2023-08-05 16:01:28,474 INFO "GET /home/bleaccoffee/ HTTP/1.1" 200 3524 basehttp.py
+2023-08-05 16:01:28,474 INFO "GET /home/bleaccoffee/ HTTP/1.1" 200 3524 basehttp.py
