@@ -1,3 +1,4 @@
+import logging
 from django.contrib.auth import logout
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.views import LoginView
@@ -10,11 +11,13 @@ from .utils import DataMixin
 from .forms import *
 
 
+log = logging.getLogger('django')
+
 class BleacCoffee(DataMixin, ListView):
     model = Coffee
     template_name = 'home/blaccoffee.html'
     context_object_name = 'item'
-
+    log.info('hello_log')
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
         c_def = self.get_user_context(title='Чиста кава')
@@ -48,7 +51,6 @@ class ShowPost(DataMixin, DetailView):
         context = super().get_context_data(**kwargs)
         c_def = self.get_user_context(title='Описання')
         return dict(list(context.items()) + list(c_def.items()))
-
 
 
 class RegisterUser(DataMixin, CreateView):

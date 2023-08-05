@@ -6,7 +6,7 @@
                 {% for p in item %}
                             <div class="iner_element">
                                 <p><img class="cup" src="{{ p.photo.url }}">
-                               <p><a href="{{p.get_absolute_url}}">{{p.title}}</a></p>
+                               <p><a class="name_tag" href="{{p.get_absolute_url}}">{{p.title}}</a></p>
                             </div>
                 {% endfor %}
 {% endblock %}
